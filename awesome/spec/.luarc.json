@@ -1,0 +1,13 @@
+{
+    "Lua.diagnostics.globals": [
+        "describe",
+        "it",
+    ],
+    "Lua.workspace.checkThirdParty": false,
+    "diagnostics.globals": [
+        "describe",
+        "it",
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "workspace.library": []
+}

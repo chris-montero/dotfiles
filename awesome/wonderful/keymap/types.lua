@@ -1,0 +1,8 @@
+
+local EVENT_PRESS = 1
+local EVENT_RELEASE = 2
+
+return {
+    EVENT_PRESS = EVENT_PRESS,
+    EVENT_RELEASE = EVENT_RELEASE,
+}

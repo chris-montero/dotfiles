@@ -1,0 +1,12 @@
+awesome/.cache/
+awesome/valuable_old_stuff/*
+nvim/lua/*
+nvim/lazy-lock.json
+nvim/README.md
+
+mpd/playlists/*
+mpd/mpd.pid
+mpd/log
+mpd/mpdstate
+mpd/sticker.sql
+mpd/mpd.db

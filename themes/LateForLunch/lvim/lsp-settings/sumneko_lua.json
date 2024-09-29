@@ -1,0 +1,9 @@
+{
+    "Lua.diagnostics.severity": {
+        "newfield-call": "Hint"
+    },
+    "Lua.diagnostics.neededFileStatus": {
+        "newfield-call": "None"
+    }
+}
+

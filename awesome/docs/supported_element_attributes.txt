@@ -1,0 +1,48 @@
+
+padding_axis = {
+    type = 1,
+    x = number | nil,
+    y = number | nil,
+}
+
+padding_each = {
+    type = 2,
+    top = number | nil,
+    right = number | nil,
+    bottom = number | nil,
+    left = number | nil,
+}
+
+shadow = {
+    color = string | nil, --TODO: change to use elemental/surface
+    offset_x = number | nil,
+    offset_y = number | nil,
+    edge_width = number | nil,
+    edge_opacity = number | nil,
+}
+
+subscribe_on_app = { <string> : function(scope, emitted_data) }
+subscribe_on_layout = { <string> : function(scope, emitted_data) }
+subscribe_on_element = { <string> : function(scope, emitted_data) }
+
+mouse_input_stop = { <string> : boolean }
+
+element = {
+    border_width = number | nil,
+    border_radius = number | nil,
+    width = number | SIZE_FILL | SIZE_SHRINK | nil, -- if nil: SIZE_SHRINK
+    height = number | SIZE_FILL | SIZE_SHRINK | nil, -- if nil: SIZE_SHRINK
+    padding = number | padding_axis | padding_each | nil, -- if nil: 0
+    spacing = number | nil, -- if nil: 0
+    border_color = string | nil, -- if nil: nil -- TODO: change to use elemental/surface
+    shadow = shadow | nil, -- if nil: nil
+    offset_x = number | nil, -- if nil: 0
+    offset_y = number | nil, -- if nil: 0
+    bg = string | nil, -- if nil: nil -- TODO: change to use elemental/surface
+    subscribe_on_app = subscribe_on_app | nil, -- if nil: nil
+    subscribe_on_layout = subscribe_on_layout | nil, -- if nil: nil
+    subscribe_on_element = subscribe_on_element | nil, -- if nil: nil
+    mouse_input_stop = mouse_input_stop | nil,
+}
+
+

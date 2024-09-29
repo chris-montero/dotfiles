@@ -1,0 +1,115 @@
+
+format = """
+$username\
+[](bg:#d6b188 fg:#ffffff)\
+$hostname\
+[](bg:#724a3b fg:#d6b188)\
+[ ](fg:#724a3b)\
+"""
+
+# format = """
+# $username\
+# [](bg:#8860ed fg:#ffffff)\
+# $hostname\
+# [](bg:#432b6b fg:#8860ed)\
+# [ ](fg:#432b6b)\
+# """
+
+right_format = """
+$git_branch\
+"""
+
+# " Beige:
+# let s:fadedbeige    = '#724a3b'
+# let s:darkbeige     = '#a5661a'
+# let s:mediumbeige   = '#d6b188'
+# let s:lightbeige    = '#ffe8cf'
+
+# $git_status\
+
+# [](fg:#86BBD8 bg:#33658A)\
+# [ ](fg:#33658A)\
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# let s:darkblue      = '#204858'
+# let s:mediumblue    = '#40c8d8'
+# let s:lightblue     = '#cceeff'
+
+# let s:darkpurple    = '#432b6b'
+# let s:mediumpurple  = '#8860ed'
+# let s:lightpurple   = '#c8b0ff'
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+# ssh_only = true
+style_user = "bg:#ffffff fg:#724a3b"
+style_root = "bg:#ffffff fg:#724a3b"
+format = '[ $user ]($style)'
+
+[hostname]
+ssh_only = false
+style = "bg:#d6b188 fg:#724a3b"
+format = "[ $hostname ]($style)"
+disabled = false
+
+[directory]
+style = "bg:#ffffff fg:#432b6b"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[line_break]
+disabled = true
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+
+
+[git_branch]
+symbol = ""
+style = "bg:#ffe8cf fg:#724a3b"
+format = '[[](fg:#724a3b)[](bg:#724a3b fg:#d6b188)[ $symbol $branch ](bg:#d6b188 fg:#724a3b)]($style)'
+
+# let s:mediumbeige   = '#d6b188'
+# let s:darkbeige     = '#a5661a'
+
+[git_status]
+style = "bg:#c8b8ff fg:#432b6b"
+format = '[[](bg:#8860ed fg:#c8b0ff)[($all_status $ahead_behind)](bg:#c8b8ff fg:#432b6b)]($style)'
+
+[lua]
+symbol = "[](fg: #3222aa) "
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[[ ♥ $time ](bg:#33658A)]($style)'
+
+# cool glyphs:
+#♥
+
