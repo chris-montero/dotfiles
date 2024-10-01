@@ -33,7 +33,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-xset r rate 210 40 & # fast cursor
+xset r rate 145 42 & # fast cursor
 picom &
 xrandr --dpi 82 &
 

@@ -6,7 +6,7 @@ plugins=(git)
 
 export PATH=~/.local/bin:~/.cargo/bin:$PATH
 export THEME="LateForLunch"
-~/.config/console_colors.sh
+# ~/.config/console_colors.sh
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
@@ -91,7 +91,7 @@ cont(){
   fi
 }
 
-export EDITOR='nvim'
+export EDITOR='hx'
 export BROWSER='firefox-developer-edition'
 export LUA='luajit'
 

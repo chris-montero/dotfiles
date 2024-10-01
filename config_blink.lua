@@ -56,11 +56,25 @@ local function make_themed_config(theme_name)
 
 end
 
+local function make_tokyonight_config()
+
+  local theme_path = "./themes/" .. "LateForLunch"
+
+  return {
+      { theme_path .. "/console_colors.sh", "~/.config/console_colors.sh" },
+      { "./themes/TokyoNight".. "/alacritty/", "~/.config/alacritty" },
+      { theme_path .. "/picom/", "~/.config/picom" },
+      { theme_path .. "/starship/", "~/.config/starship" },
+      table.unpack(_common_config)
+  }
+end
+
 
 -- return config_substitute_home(home, test_config_inexistent_sources)
 -- return config_substitute_home(home, test_config_multiple_times_target)
 -- return config_substitute_home(home, test_config_source_and_target_point_to_the_same_place)
 -- return config_substitute_home(home, test_config_intermediary_target_directories_dont_exist)
 -- return config_substitute_home(home, test_config_targets_exist)
-return make_themed_config("LateForLunch")
+-- return make_themed_config("LateForLunch")
+return make_tokyonight_config()
 
